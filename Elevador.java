@@ -12,29 +12,29 @@ public class Elevador {
 
     public void abrirPorta() {
         this.portaAberta = true;
-        System.out.println("Porta ABERTA.");
+        System.out.println("s porta do elevador abriu");
     }
 
     public void fecharPorta() {
         this.portaAberta = false;
-        System.out.println("Porta FECHADA.");
+        System.out.println("A porta do elevador fechou");
     }
 
     public void subir() {
         if (!this.portaAberta && this.andarAtual < this.totalAndares) {
             this.andarAtual++;
-            System.out.println("Subindo... Agora estamos no andar " + this.andarAtual);
+            System.out.println("Subindo para o andar " + this.andarAtual);
         } else {
-            System.out.println("ERRO: Não é possível subir.");
+            System.out.println("Não deu para subir, POrque a porta está aberta ou já estamos no ultimo andar");
         }
     }
 
     public void descer() {
         if (!this.portaAberta && this.andarAtual > 0) {
             this.andarAtual--;
-            System.out.println("Descendo... Agora estamos no andar " + this.andarAtual);
+            System.out.println("Descendo para o andar " + this.andarAtual);
         } else {
-            System.out.println("ERRO: Não é possível descer.");
+            System.out.println("Não deu para descer porque a porta está aberta ou já estamos no térreo");
         }
     }
 
